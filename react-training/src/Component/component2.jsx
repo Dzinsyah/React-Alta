@@ -3,7 +3,8 @@ import logo from "../logo.svg";
 
 const styleLogo = {
   height: "50px",
-  width: "50px"
+  width: "50px",
+  borderRadius: "50%"
 };
 class Componenet2 extends Component {
   render() {
