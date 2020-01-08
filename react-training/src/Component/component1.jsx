@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import { connect } from "unistore/react";
+import { actions } from "../store";
 import "../style/style.css";
 
 class Componenet1 extends Component {
@@ -8,13 +11,15 @@ class Componenet1 extends Component {
   render() {
     return (
       <div>
-        <h3 className="text-component">ini component 1</h3>
-        <p>ini tag p di component 1 </p>
-        <br />
-        <button onClick={this.callAlert}>coba klik button ini</button>
+        <input
+          placeholder="ini input pada component 1"
+          name="inputComponent1"
+          onChange={e => this.props.handleInputChange2(e)}
+        />
+        <p>cek hasil input component 1:{this.props.inputComponent1}</p>
       </div>
     );
   }
 }
 
-export default Componenet1;
+export default connect("inputComponent1", actions)(withRouter(Componenet1));

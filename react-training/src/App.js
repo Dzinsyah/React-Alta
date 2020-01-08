@@ -1,12 +1,15 @@
 import React, { Component } from "react";
-import Page1 from "./Pages/page1";
-import Page2 from "./Pages/page2";
+import "./style/index.css";
+import "./style/App.css";
+import MainRoute from "./route/MainRoute";
+import Navigation from "./Component/navbar";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Page2 />
+        <Navigation />
+        <MainRoute />
       </div>
     );
   }
